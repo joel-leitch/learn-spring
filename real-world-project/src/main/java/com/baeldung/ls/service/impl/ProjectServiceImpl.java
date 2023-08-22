@@ -12,11 +12,7 @@ import com.baeldung.ls.service.IProjectService;
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
-    @Autowired
-    private IProjectRepository projectRepository;
-
-    public ProjectServiceImpl() {
-    }
+    private final IProjectRepository projectRepository;
 
     public ProjectServiceImpl(IProjectRepository projectRepository) {
         this.projectRepository = projectRepository;
@@ -35,9 +31,4 @@ public class ProjectServiceImpl implements IProjectService {
     public IProjectRepository getProjectRepository() {
         return projectRepository;
     }
-
-    public void setProjectRepository(IProjectRepository projectRepository) {
-        this.projectRepository = projectRepository;
-    }
-
 }
